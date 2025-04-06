@@ -228,6 +228,20 @@ textarea, select {
     }
 }
 
+@layer layout {
+    .wrapper {
+        /* /* for Figma design */ 
+        /* max-width: calc(1130px + 2rem); */
+
+        max-width: 1130px;
+        margin-inline: auto;
+        padding-inline: 1rem;
+        
+        /* for Figma design */
+        box-sizing: content-box;
+    }
+}
+
 /* Meaningful links, assistive technologies  */
 @layer utilities {
   .visually-hidden {
