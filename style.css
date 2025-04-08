@@ -270,8 +270,32 @@ textarea, select {
     }
 }
 
-/* Meaningful links, assistive technologies  */
+@layer components {
+
+    .site-header {
+        padding-block: 1rem;
+    }
+
+    .site-header__inner {
+        display: flex;
+        justify-content: space-between;
+
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+    }
+
+    .primary-navigation {
+        ul {
+            display: flex;
+            gap: 0.5rem 1rem;
+
+            flex-wrap: wrap;
+        }
+    }
+}
+
 @layer utilities {
+    /* Meaningful links, assistive technologies  */
     .visually-hidden {
         clip: rect(0 0 0 0);
         clip-path: inset(50%);
@@ -332,3 +356,4 @@ textarea, select {
         font-size: var(--font-size-lg);
     }
 }
+
