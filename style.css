@@ -234,6 +234,33 @@ textarea, select {
 
 @layer layout {
 
+    .equal-columns {
+        display: grid;
+        gap: var(--equal-columns-gap, 1rem);
+        align-items: var(--equal-columns-vertical-alignment, stretch);
+
+        @media (width > 760px) {
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+        }
+
+        /* with modifiers and custom properties */
+        &[data-gap="large"] {
+            --equal-columns-gap: 2rem;
+        }
+        &[data-alignment="centered"] {
+            --equal-columns-vertical-alignment: center;
+        }
+
+    }
+
+    /* .flex-equal-columns {
+        display: flex;
+        > * {
+            flex: 1;
+        }
+    } */
+
     .section {
         --padding: 3.75rem;
         padding-block: var(--padding);
