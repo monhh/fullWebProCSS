@@ -234,6 +234,15 @@ textarea, select {
 
 @layer layout {
 
+    /* space */
+    .flow > * + * {
+        margin-block-start: var(--flow-spacer, 1em);
+    }
+    .grid-flow {
+        display: grid;
+        gap: var(--grid-flow-gap, 1rem);
+    }
+    
     .equal-columns {
         display: grid;
         gap: var(--equal-columns-gap, 1rem);
