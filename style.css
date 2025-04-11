@@ -368,6 +368,25 @@ textarea, select {
         color: var(--card-title-color, var(--text-brand));
     }
 
+    .button {
+        display: inline-flex;
+        padding: 0.5rem 1rem;
+        background-color: var(--background-accent-main);
+        border-radius: var(--border-radius-2);
+
+        font-family: var(--ff-heading);
+        font-size: var(--font-size-md);
+        font-weight: 700;
+
+        text-decoration: none;
+    }
+
+    .button:hover,
+    .button:focus-visible {
+        color: var(--text-high-contrast);
+        background-color: var(--background-accent-dark);
+    }
+
 }
 
 @layer utilities {
