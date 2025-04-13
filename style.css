@@ -321,12 +321,70 @@ textarea, select {
         gap: 0.5rem 1rem;
     }
 
+
+    /* Styling the mobile navigation  */
+    [aria-controls="primary-nav"] {
+        z-index: 100;
+        cursor: pointer;
+        background: transparent;
+        border: 0;
+
+        img { border-radius: 0 }
+    }
+
+    [aria-controls="primary-nav"] {
+        display: none; /* hide hamburger */
+    }
+
     .primary-navigation {
         ul {
             display: flex;
             gap: 0.5rem 1rem;
-
             flex-wrap: wrap;
+        }
+
+        a {text-decoration: none;}
+
+        @media (width < 760px) {
+            display: none; /* hide mobile navigation */
+
+            position: absolute;
+            z-index: 10;
+            top: 0;
+            right: 0;
+
+            padding: 2rem;;
+
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            font-family: var(--ff-heading);
+
+            border-radius: 0 0 0 var(--border-radius-3);
+            background-color: var(--background-accent-main);
+
+            ul {
+                flex-direction: column;
+                gap: 0;/* remove gap */
+            }
+
+            /*   ul > * + *    */
+            li + li {
+                margin-block-start: 1.5rem;
+                padding-block-start: 1.5rem;
+                border-top: 2px solid var(--background-accent-light);
+            }
+        }
+    }
+
+    /* show mobile navigation */
+    @media (width < 760px) {
+        /* show hamburger */
+        [aria-controls="primary-nav"] {
+            display: block;
+        }
+        /* show mobile navigation */
+        [aria-expanded="true"] ~ .primary-navigation {
+            display: block;
         }
     }
 
