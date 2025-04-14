@@ -304,6 +304,18 @@ textarea, select {
             --wrapper-max-width: 1130px;
         }
     }
+
+    /* for the second page */
+    .grid-auto-fit {
+        --auto-fit-min-col-size: 250px;
+        
+        display: grid;
+        gap: 1rem;
+        /* min() ensures not overflow, 100% is the size of the container */ 
+        /* grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr)); */
+        grid-template-columns: repeat(auto-fit, minmax(min(var(--auto-fit-min-col-size), 100%), 1fr));
+    }
+    
 }
 
 
