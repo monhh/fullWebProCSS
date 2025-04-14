@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fullWebProCSS</title>
+    
+    <link rel="stylesheet" href="/style.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet" />
+    <script src="/main.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-to-main" href="#main">Skip to main content</a>
+    <header class="site-header">
+        <div class="wrapper" data-width="wide">
+            <div class="site-header__inner">
+                <img src="/assets/fungi-finders.svg" alt="Fungi Finders">
+                <button aria-controls="primary-nav" aria-expanded="false">
+                    <span class="visually-hidden">Menu</span>
+                    <img src="/assets/hamburger.svg" alt="">
+                </button>
+                <nav id="primary-nav" class="primary-navigation">
+                    <ul role="list">
+                        <li><a href="/">Discover</a></li>
+                        <li><a href="#">Mushroom Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!-- section "hero" -->
+        <section class="hero section flow" data-padding="compact">
+            <div class="wrapper">
+                <h1 class="hero__title">Quick reference <span>Mushrooms Guide</span> </h1>
+            </div>
+            <div class="wrapper" data-width="narrow">
+                <div class="flow">
+                    <p>Discover a wide array of mushrooms from around the world, each with its own unique flavor profile and culinary uses.</p>
+                    <p>Whether you're looking for earthy porcinis, delicate chanterelles, or meaty shiitakes, our selection has something for
+                    every palate.</p>
+                    <p>Explore the diverse shapes, sizes, and colors of these fungi to elevate your dishes to new heights.</p>
+                </div>
+            </div>
+        </section>
+
+       <!-- section "Where to look" -->
+        <section class="section background-accent">
+            <div class="wrapper ">
+                <div class="equal-columns" data-alignment="centered" data-gap="large">
+                    <div>
+                        <img src="/assets/where-to-look.webp" alt="A mushroom in the forest">
+                    </div>
+                    <div class="flow font-size-lg text-high-contrast">
+                        <h2 class="section-title">Where to look</h2>
+                        <p>Different species grow in different types of environments.</p>
+                        <p>Forests are always a good starting place, though, with a wide range of species that grow in them.</p>
+                        <p>If you’re after something specific, you can use our reference guide below to help you out.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section "Get to know your mushrooms" -->
+        <section class="section">
+            <div class="wrapper">
+                <h2 class="section-title">Get to know your mushrooms</h2>
+                <select>
+                    <option value="all">Season: All</option>
+                    <option value="spring">Spring</option>
+                    <option value="summer">Summer</option>
+                    <option value="fall">Fall</option>
+                </select>
+                <select>
+                    <option value="all">Type: All</option>
+                    <option value="edible">Edible</option>
+                    <option value="toxic">Toxic</option>
+                </select>
+
+                <!-- grid of cards -->
+                 <div>
+
+                 </div>
+            </div>
+        </section> 
+
+        <!-- section "FAQ" -->
+        <section class="section background-extra-dark">
+            <div class="wrapper" data-width="wide">
+
+                <div class="card">
+                    <img src="/assets/start-foraging.webp" alt="basket full of wild mushrooms">
+                    <h3 class="card__title">What do I need to start mushroom foraging?</h3>
+                    <p>You'll need a local field guide, a sharp knife or scissors, a basket or mesh bag for collecting, and paper bags for
+                    separating specimens. Bring a small brush for cleaning, wear sturdy boots, and carry a GPS device or compass to track
+                    your location. A camera is also helpful to document your finds.</p>
+                </div>
+
+                <div class="card">
+                    <img src="/assets/identify-mushrooms.webp" alt="Identify edible mushrooms with a field guide">
+                    <h3 class="card__title">How can I identify edible mushrooms?</h3>
+                    <p>Learn from experienced foragers and reliable guidebooks – never rely on apps alone. Study each mushroom's specific
+                    features like cap shape, gill structure, stem characteristics, and spore prints. Start with easily identifiable species
+                    that have no poisonous lookalikes, and never eat anything unless you're completely certain of its identification.</p>
+                </div>
+
+                <div class="card">
+                    <img src="/assets/where-to-find.webp" alt="A Mushroom covered in leaves">
+                    <h3 class="card__title">Where can I find foraging spots?</h3>
+                    <p>Look in deciduous forests, especially near oak and maple trees, and in damp, shaded areas. Fallen logs and dead trees
+                    are often productive spots. Only forage on public lands where it's allowed, and always check local regulations. Remember
+                    to get permission for private property and keep your best locations private to prevent over-harvesting.</p>
+                </div>
+
+                <div class="card">
+                    <img src="/assets/best-seasons.webp" alt="A red capped mushroom with white dots in it">
+                    <h3 class="card__title">What are the best seasons for mushroom foraging?</h3>
+                    <p>Spring is ideal for morels, late summer brings chanterelles and boletes, and fall is peak season for most mushrooms
+                    including oysters and hen of the woods. Some species can even be found in winter, especially in milder climates. Each
+                    season offers different varieties, so year-round foraging is possible.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p class="site-footer__title">Happy Foraging!</p>
+        <a href="mailto:contact@fungifinders.com">contact@fungifinders.com</a>
+    </footer>
+
+</body>
+
+</html>
