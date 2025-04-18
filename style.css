@@ -649,6 +649,11 @@ textarea, select {
 }
 
 @layer utilities {
+    
+    [hidden] {
+        display: none;
+    }
+
     /* Meaningful links, assistive technologies  */
     .visually-hidden {
         clip: rect(0 0 0 0);
