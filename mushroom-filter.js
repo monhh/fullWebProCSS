@@ -2,6 +2,8 @@ const cards = document.querySelectorAll('.mushroom-guide .card');
 const seasonalFilter = document.querySelector('#season');
 const edibleFilter = document.querySelector('#edible');
 
+const noResultsMessage = document.querySelector('.no-matches');
+
 const currentFilters = {
     season: "all",
     edible: "all"
@@ -33,6 +35,9 @@ function updateFilter(e) {
 
 
 function filterCards() {
+
+    let hasVisibleCards = false;
+
     cards.forEach((card) => {
         //console.log(card);
         const season = card.querySelector('[data-season]').dataset.season;
@@ -48,9 +53,19 @@ function filterCards() {
             (matchesSeason || currentFilters.season === "all")
         ) {
             card.hidden = false;
+            hasVisibleCards = true;
         } else {
             card.hidden = true;
         }
-    });
+
+        //console.log(hasVisibleCards);
+
+        if (hasVisibleCards) {
+            noResultsMessage.hidden = true;
+        } else {
+            noResultsMessage.hidden = false;
+        }
+        
+     });
 }
 //filterCards();
