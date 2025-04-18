@@ -9,6 +9,13 @@ const currentFilters = {
     edible: "all"
 };
 
+// add view transition name to each card
+// this is used to animate the transition when filtering the cards
+cards.forEach((card, index) => {
+    const mushroomId = `mushroom-${index + 1}`;
+    card.style.viewTransitionName = `card-${mushroomId}`;
+});
+
 /* seasonedFiltert.addEventListener('change', (event) => {
     currentFilters.seasoned = event.target.value;
     console.log(currentFilters);
@@ -30,7 +37,15 @@ function updateFilter(e) {
     currentFilters[filterType] = e.target.value;
     //console.log(currentFilters);
 
-    filterCards();
+    /* filterCards(); */
+
+    // Check if the browser supports View Transitions
+    // If not, fallback to the default filtering method
+    if (!document.startViewTransition) {
+        filterCards();
+        return;
+    }
+    document.startViewTransition(() => filterCards());
 }
 
 
