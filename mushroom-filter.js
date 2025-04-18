@@ -69,3 +69,11 @@ function filterCards() {
      });
 }
 //filterCards();
+
+
+/* if JavaScript is enabled show the filters select */
+function enableFiltering() {
+    seasonalFilter.hidden = false;
+    edibleFilter.hidden = false;
+}
+enableFiltering();
