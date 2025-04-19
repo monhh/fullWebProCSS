@@ -405,13 +405,6 @@ textarea, select {
         @media (width < 760px) {
             display: none; /* hide mobile navigation */
 
-            /* animate mobile navigation */
-            /* opacity: 0;
-            transition: opacity 1s, display 1s, translate 1s;
-            transition-behavior: allow-discrete;
-            translate: 100% 0; */
-
-
             position: absolute;
             z-index: 10;
             top: 0;
@@ -449,14 +442,6 @@ textarea, select {
         /* show mobile navigation */
         [aria-expanded="true"] ~ .primary-navigation {
             display: block;
-
-            /* animate mobile navigation */
-            /* opacity: 1;
-            translate: 0 0;
-            @starting-style {
-                opacity: 0;
-                translate: 0 -100%;
-            } */
         }
     }
 
@@ -683,10 +668,10 @@ textarea, select {
     }
 
     /* Fixing the resizing issue: disable animations when resizing */
-    .resizing * {
+    /* .resizing * {
         transition: none;
         animation-play-state: paused;
-    }
+    } */
 
     /* Meaningful links, assistive technologies  */
     .visually-hidden {
