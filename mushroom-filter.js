@@ -16,6 +16,7 @@ cards.forEach((card, index) => {
     card.style.viewTransitionName = `card-${mushroomId}`;
 });
 
+// refactoring with a function -----------------------------
 /* seasonedFiltert.addEventListener('change', (event) => {
     currentFilters.seasoned = event.target.value;
     console.log(currentFilters);
