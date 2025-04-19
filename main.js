@@ -13,3 +13,14 @@ navToggle.addEventListener("click", () => {
 
     console.log(navOpened);
 })
+
+/* Fixing the resizing issue: disable animations when resizing */
+const resizeObserver = new ResizeObserver(() => {
+    document.body.classList.add("resizing");
+
+    requestAnimationFrame(() => {
+        document.body.classList.remove("resizing");
+    });
+
+});
+resizeObserver.observe(document.body);

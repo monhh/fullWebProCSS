@@ -406,10 +406,10 @@ textarea, select {
             display: none; /* hide mobile navigation */
 
             /* animate mobile navigation */
-            opacity: 0;
+            /* opacity: 0;
             transition: opacity 1s, display 1s, translate 1s;
             transition-behavior: allow-discrete;
-            translate: 100% 0;
+            translate: 100% 0; */
 
 
             position: absolute;
@@ -451,12 +451,12 @@ textarea, select {
             display: block;
 
             /* animate mobile navigation */
-            opacity: 1;
+            /* opacity: 1;
             translate: 0 0;
             @starting-style {
                 opacity: 0;
                 translate: 0 -100%;
-            }
+            } */
         }
     }
 
@@ -680,6 +680,12 @@ textarea, select {
 
     [hidden] {
         display: none;
+    }
+
+    /* Fixing the resizing issue: disable animations when resizing */
+    .resizing * {
+        transition: none;
+        animation-play-state: paused;
     }
 
     /* Meaningful links, assistive technologies  */
