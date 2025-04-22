@@ -3,9 +3,7 @@
 } */
 
 @layer reset {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
         box-sizing: border-box;
     }
 
@@ -16,28 +14,21 @@
         text-size-adjust: none;
     }
 
-    /* Remove default margin in favour of better control in authored CSS */
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    p,
-    figure,
-    blockquote,
-    dl,
-    dd {
-        /* margin-block-end: 0; */
-        margin: 0;
+    /* Remove default margin */
+    body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+        /* margin-block-end: 0; */ /* Andy Bell */
+        margin: 0; /* Kevin Powell */
     }
 
-    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-    /* ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-} */
+    /* Andy Bell: Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    /* 
+    ul[role='list'],
+    ol[role='list'] {
+        list-style: none;
+    } 
+    */
 
-    /* https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
+    /* Kevin Powell. https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html */
     [role="list"] {
         list-style: none;
         margin: 0;
@@ -46,82 +37,85 @@ ol[role='list'] {
 
     /* Set core body defaults */
     body {
-        min-block-size: 100vh;
-        /* line-height: 1.6; */
-        line-height: 1.5;
+        /* min-height: 100vh;*/ /* Andy Bell */
+        min-block-size: 100vh; /* Kevin Powell */
+        line-height: 1.5; /* both  */
     }
-    /* Set shorter line heights on headings and interactive elements */
-    /* h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-} */
 
-    h1,
-    h2,
-    h3,
-    button,
-    input,
-    label {
+    /* Andy Bell: Set shorter line heights on headings and interactive elements */
+    /* 
+    h1, h2, h3, h4, button, input, label {
         line-height: 1.1;
-    }
+    } 
+    */
+
+    /* Kevin Powell */
+    h1, h2, h3, button, input, label {
+        line-height: 1.1;
+    } 
 
     /* Balance text wrapping on headings */
-    h1,
-    h2,
-    h3,
-    h4 {
+    h1, h2, h3, h4 {
         text-wrap: balance;
     }
-
-    /* A elements that don't have a class get default styles */
-    /* a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
- */
-
-    p,
-    li {
+    
+    /* Kevin Powell */
+    p, li {
         text-wrap: pretty;
     }
 
-    /* Make images easier to work with */
-    /* img,
-picture {
-  max-width: 100%;
-  display: block;
-} */
+    /* Andy Bell: A elements that don't have a class get default styles */
+    /* 
+    a:not([class]) {
+        text-decoration-skip-ink: auto;
+        color: currentColor;
+        }
+     */
 
-    img,
-    picture {
+
+    /* Andy Bell: Make images easier to work with */
+    /* 
+    img, picture {
+        max-width: 100%;
+        display: block;
+    } 
+    */
+
+    /* Kevin Powell */
+    img, picture {
         max-inline-size: 100%;
         display: block;
     }
 
-    /* Inherit fonts for inputs and buttons */
-    /* input, button,
-textarea, select {
-  font-family: inherit;
-  font-size: inherit;
-} */
+    /* Andy Bell: Inherit fonts for inputs and buttons */
+    /* 
+    input, button, textarea, select {
+        font-family: inherit;
+        font-size: inherit;
+    } 
+    */
 
-    input,
-    button,
-    textarea,
-    select {
+    /* Kevin Powell */
+    input, button, textarea, select {
         font: inherit;
     }
 
-    /* Make sure textareas without a rows attribute are not tiny */
-    /* textarea:not([rows]) {
-  min-height: 10em;
-} */
+    /* Andy Bell: Make sure textareas without a rows attribute are not tiny */
+    /* 
+    textarea:not([rows]) {
+        min-height: 10em;
+    } 
+    */
 
-    /* Anything that has been anchored to should have extra scroll margin */
-    /* :target {
-  scroll-margin-block: 5ex;
-}
- */
+    /* Andy Bell: Anything that has been anchored to should have extra scroll margin */
+    /* For example, if a user clicks a "Skip to main content" link, the browser will scroll to the #main element. 
+        The scroll-margin-block ensures that the #main element does not appear too close to the top of the viewport */
+    /* 
+    :target {
+        scroll-margin-block: 5ex;
+    }
+    */
+
 }
 
 @layer base {
