@@ -20,6 +20,11 @@
         margin: 0; /* Kevin Powell */
     }
 
+     /* Remove list styles on ul, ol elements
+         Safari removes list semantics of lists that don’t look like lists (list-style: none). 
+         Scott O’Hara provided a fix in “Fixing” Lists, where he suggests setting role="list" explicitly on the list to re-add list semantics
+    */
+
     /* Andy Bell: Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
     /* 
     ul[role='list'],
